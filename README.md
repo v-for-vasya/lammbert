@@ -11,6 +11,8 @@ A unique invariant that is between constant sum (x+y=k) and constant product (xy
 
 https://github.com/v-for-vasya/lammbert/assets/11951513/e3bb078e-1c59-41c1-b923-8afa7350f6ca
 
+[Desmos example](https://www.desmos.com/calculator/kwzpkeud7y)
+
 1. Default hook from Uniswap Foundation [Counter.sol](src/Counter.sol) demonstrate the `beforeSwap()` hook where the invariant logic is inserted.
 2. The invariant curve constant sum template used as our starting point [Counter.t.sol](test/Counter.t.sol) preconfigures the v4 pool manager, test tokens, and test liquidity.
 
