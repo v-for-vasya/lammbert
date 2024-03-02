@@ -1,6 +1,5 @@
 # Lammbert Uniswap v4 Hook
-### ** Based on the Euler Finance 
-[`tweet`](https://twitter.com/euler_mab/status/1724403149593583745) by Michael Bentley **
+### ** Based on the Euler Finance [`tweet`](https://twitter.com/euler_mab/status/1724403149593583745) by Michael Bentley **
 
 [`White paper`](https://github.com/euler-mab/LAMMbert/blob/main/LAMMbert.pdf)
 
