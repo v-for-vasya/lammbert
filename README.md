@@ -1,14 +1,17 @@
-# Lammbert Uniswap v4 Hook
+# LAMMbert Uniswap v4 Hook
 ### ** Based on the Euler Finance [`tweet`](https://twitter.com/euler_mab/status/1724403149593583745) by Michael Bentley **
 
 [`White paper`](https://github.com/euler-mab/LAMMbert/blob/main/LAMMbert.pdf)
 
 ### TLDR ###
-Unliked Uniswap v3, Uniswap v4 allows one to create unique invariants to offer a reduced price impact and to be able to also provide liquidity in the tails.
-A unique invariant that interpolates between constant sum (x+y=k) and constant product (xy=k) based on the work of Michael Bentley utilizing the [Lambert W function](https://en.wikipedia.org/wiki/Lambert_W_function) implemented with the solady fixdepointmath.sol library by [vectorized.eth](https://github.com/Vectorized).
+Unliked Uniswap v3, Uniswap v4 allows one to create **unique invariants** to offer a reduced price impact and to be able to also provide liquidity in the tails.
+A unique basic invariant that is between constant sum (x+y=k) and constant product (xy=k) is implemented as a hook based on the work of Michael Bentley utilizing the [Lambert W function](https://en.wikipedia.org/wiki/Lambert_W_function) implemented with the solady fixdepointmath.sol library by [vectorized.eth](https://github.com/Vectorized).
 
 1. Default hook from Uniswap Foundation [Counter.sol](src/Counter.sol) demonstrate the `beforeSwap()` hook where the invariant logic is inserted.
 2. The invariant curve constant sum template used as our starting point [Counter.t.sol](test/Counter.t.sol) preconfigures the v4 pool manager, test tokens, and test liquidity.
+
+An interesting combo we wanted to implement is to use Euler Vaults inside a `beforeSwap()` for Just-in-Time liquidity provision, then move the gathered fees back into the Euler Vault. 
+Potential problem there would be changes in returning the same proportion of assets back as the LP composition changes though and we couldn't figure out how to return the same proportions that we borrowed.
 
 <details>
 <summary>Updating to v4:latest</summary>
