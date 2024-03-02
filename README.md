@@ -21,17 +21,6 @@ Though a more advanced hook could be to link `c` to a ZK-coprocessor such as Axi
 An interesting combo we wanted to implement is to use Euler Vaults inside a `beforeSwap()` for Just-in-Time liquidity provision, then move the gathered fees back into the Euler Vault. 
 Potential problem there would be changes in returning the same proportion of assets back as the LP composition changes though and we couldn't figure out how to return the same proportions that we borrowed.
 
-<details>
-<summary>Updating to v4:latest</summary>
-
-This template is actively maintained -- you can update the v4 dependencies, scripts, and helpers: 
-```bash
-git remote add template https://github.com/uniswapfoundation/v4-template
-git fetch template
-git merge template/main <BRANCH> --allow-unrelated-histories
-```
-
-</details>
 
 ---
 
