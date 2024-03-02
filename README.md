@@ -32,8 +32,12 @@ Potential problem there would be changes in returning the same proportion of ass
 
 ```
 forge install
-forge install vectorized/solady
 forge test
+```
+
+*add solady's fixedpointmath.sol library containing the Lambert W equation*
+```
+forge install vectorized/solady
 ```
 
 ### Local Development (Anvil)
