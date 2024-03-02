@@ -1,13 +1,13 @@
-# v4-template
-### **A template for writing Uniswap v4 Hooks 🦄**
+# Lammbert Uniswap v4 Hook
+### ** Based on the Euler Finance tweet by Michael Bentley https://twitter.com/euler_mab/status/1724403149593583745 **
 
-[`Use this Template`](https://github.com/uniswapfoundation/v4-template/generate)
+[`White paper`](https://github.com/euler-mab/LAMMbert/blob/main/LAMMbert.pdf)
 
-1. The example hook [Counter.sol](src/Counter.sol) demonstrates the `beforeSwap()` and `afterSwap()` hooks
-2. The test template [Counter.t.sol](test/Counter.t.sol) preconfigures the v4 pool manager, test tokens, and test liquidity.
+1. Default hook from Uniswap Foundation [Counter.sol](src/Counter.sol) demonstrates the `beforeSwap()` hook where the invariant logic is inserted.
+2. The invariant curve constant sum template [Counter.t.sol](test/Counter.t.sol) preconfigures the v4 pool manager, test tokens, and test liquidity.
 
 <details>
-<summary>Updating to v4-template:latest</summary>
+<summary>Updating to v4:latest</summary>
 
 This template is actively maintained -- you can update the v4 dependencies, scripts, and helpers: 
 ```bash
@@ -48,11 +48,8 @@ forge script script/Anvil.s.sol \
 <details>
 <summary><h3>Testnets</h3></summary>
 
-NOTE: 11/21/2023, the Goerli deployment is out of sync with the latest v4. **It is recommend to use local testing instead**
+We ran out of time to test the invariant, only compiled it, but the Goerli deployment is out of sync with the latest v4. **It is recommend to use local testing instead**
 
-~~For testing on Goerli Testnet the Uniswap Foundation team has deployed a slimmed down version of the V4 contract (due to current contract size limits) on the network.~~
-
-~~The relevant addresses for testing on Goerli are the ones below~~
 
 ```bash
 POOL_MANAGER = 0x0
@@ -69,7 +66,7 @@ forge script script/00_Counter.s.sol \
 --broadcast
 ```
 
-### *Deploying your own Tokens For Testing*
+### *Deploying your own Tokens For Testing according to Saucepoints*
 
 Because V4 is still in testing mode, most networks don't have liquidity pools live on V4 testnets. We recommend launching your own test tokens and expirementing with them that. We've included in the templace a Mock UNI and Mock USDC contract for easier testing. You can deploy the contracts and when you do you'll have 1 million mock tokens to test with for each contract. See deployment commands below
 
@@ -91,8 +88,6 @@ forge create script/mocks/mUSDC.sol:MockUSDC \
 
 <details>
 <summary><h2>Troubleshooting</h2></summary>
-
-
 
 ### *Permission Denied*
 
