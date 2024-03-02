@@ -14,7 +14,7 @@ https://github.com/v-for-vasya/lammbert/assets/11951513/e3bb078e-1c59-41c1-b923-
 1. Default hook from Uniswap Foundation [Counter.sol](src/Counter.sol) demonstrate the `beforeSwap()` hook where the invariant logic is inserted.
 2. The invariant curve constant sum template used as our starting point [Counter.t.sol](test/Counter.t.sol) preconfigures the v4 pool manager, test tokens, and test liquidity.
 
-We solved the equation for swapping and removed the parameter `c` the liquidity concentrationg parameter for the sake of simplicity:
+We solved the equation for swapping and removed `c` the liquidity concentrationg parameter for the sake of simplicity (dashed line above):
 
 <img width="919"  src="https://github.com/v-for-vasya/lammbert/assets/11951513/6d2b5f7c-55cf-48a2-b77f-a1e17652770b">
 
