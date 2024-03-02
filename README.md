@@ -4,7 +4,7 @@
 [`Bentley's White Paper`](https://github.com/euler-mab/LAMMbert/blob/main/LAMMbert.pdf)
 
 ### TLDR ###
-Unliked Uniswap v3, Uniswap v4 allows one to create **unique invariants** to offer a reduced price impact and to be able to also provide liquidity in the tails.
+Unlike Uniswap v3 liquidity concentration with ranges, Uniswap v4 allows one to create **unique invariants** to offer a reduced price impact and to be able to also provide liquidity in the tails.
 A unique invariant that is between constant sum (x+y=k) and constant product (xy=k) is implemented as a hook based on the work of Michael Bentley utilizing the [Lambert W function](https://en.wikipedia.org/wiki/Lambert_W_function) implemented with the solady fixdepointmath.sol library by [vectorized.eth](https://github.com/Vectorized).
 
 
