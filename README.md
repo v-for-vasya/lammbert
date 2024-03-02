@@ -1,7 +1,7 @@
 # LAMMbert Uniswap v4 Hook
 ### ** Based on the Euler Finance [`tweet`](https://twitter.com/euler_mab/status/1724403149593583745) by Michael Bentley **
 
-[`White paper`](https://github.com/euler-mab/LAMMbert/blob/main/LAMMbert.pdf)
+[`Bentley's White Paper`](https://github.com/euler-mab/LAMMbert/blob/main/LAMMbert.pdf)
 
 ### TLDR ###
 Unliked Uniswap v3, Uniswap v4 allows one to create **unique invariants** to offer a reduced price impact and to be able to also provide liquidity in the tails.
