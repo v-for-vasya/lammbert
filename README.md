@@ -7,6 +7,8 @@
 Unliked Uniswap v3, Uniswap v4 allows one to create **unique invariants** to offer a reduced price impact and to be able to also provide liquidity in the tails.
 A unique basic invariant that is between constant sum (x+y=k) and constant product (xy=k) is implemented as a hook based on the work of Michael Bentley utilizing the [Lambert W function](https://en.wikipedia.org/wiki/Lambert_W_function) implemented with the solady fixdepointmath.sol library by [vectorized.eth](https://github.com/Vectorized).
 
+![lambertw](https://github.com/v-for-vasya/lammbert/assets/11951513/4c07ffb9-a085-4dcf-95c0-facbdf3c0342)
+
 1. Default hook from Uniswap Foundation [Counter.sol](src/Counter.sol) demonstrate the `beforeSwap()` hook where the invariant logic is inserted.
 2. The invariant curve constant sum template used as our starting point [Counter.t.sol](test/Counter.t.sol) preconfigures the v4 pool manager, test tokens, and test liquidity.
 
