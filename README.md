@@ -12,6 +12,12 @@ A unique red invariant that is between constant sum (x+y=k) and constant product
 1. Default hook from Uniswap Foundation [Counter.sol](src/Counter.sol) demonstrate the `beforeSwap()` hook where the invariant logic is inserted.
 2. The invariant curve constant sum template used as our starting point [Counter.t.sol](test/Counter.t.sol) preconfigures the v4 pool manager, test tokens, and test liquidity.
 
+We solved the equation for swapping and removed the parameter `c` the liquidity concentrationg parameter for the sake of simplicity:
+
+<img width="919"  src="https://github.com/v-for-vasya/lammbert/assets/11951513/6d2b5f7c-55cf-48a2-b77f-a1e17652770b">
+
+Though a more advanced hook could be to link `c` to a ZK-coprocessor such as Axiom which would calculate volatility offchain and use that as a barometer. A high volatility would translate in `c` moving the LAMMbert curve towards a constant product invariant and a low `c` would move it towards a constant sum invariant.
+
 An interesting combo we wanted to implement is to use Euler Vaults inside a `beforeSwap()` for Just-in-Time liquidity provision, then move the gathered fees back into the Euler Vault. 
 Potential problem there would be changes in returning the same proportion of assets back as the LP composition changes though and we couldn't figure out how to return the same proportions that we borrowed.
 
