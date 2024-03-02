@@ -117,9 +117,3 @@ Hook deployment failures are caused by incorrect flags or incorrect salt mining
 
 ---
 
-Additional resources:
-
-[v4-periphery](https://github.com/uniswap/v4-periphery) contains advanced hook implementations that serve as a great reference
-
-[v4-core](https://github.com/uniswap/v4-core)
-
